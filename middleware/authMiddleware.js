@@ -1,7 +1,7 @@
 // middleware/authMiddleware.js
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
-
+require('dotenv').config()
 module.exports = async (req, res, next) => {
   const token = req.headers.authorization?.split(' ')[1];
   if (!token) {
@@ -10,7 +10,7 @@ module.exports = async (req, res, next) => {
   }
   
   try {
-    const decoded = jwt.verify(token, 'jack');
+    const decoded = jwt.verify(token, process.env.SECRETE_KEY);
     console.log('Decoded token:', decoded);
     const user = await User.findByPk(decoded.id);
     if (!user) {
