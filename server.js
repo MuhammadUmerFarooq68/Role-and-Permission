@@ -7,9 +7,9 @@ const permissionRoutes = require('./routes/permission');
 const rolePermissionRoutes = require('./routes/rolePermission');
 
 const app = express();
-const PORT = process.env.PORT || 3000; // Define PORT
+const PORT = process.env.PORT || 3000; 
 
-app.use(express.json()); // Use express.json() directly
+app.use(express.json()); 
 
 // Set up routes
 app.use('/api/auth', authRoutes);
