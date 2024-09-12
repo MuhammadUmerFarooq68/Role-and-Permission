@@ -40,8 +40,6 @@ exports.getPermissions = async (req, res) => {
           }
         ]
       });
-
-      // Format the permissions to match the desired response structure
       const formattedPermissions = permissions.map(permission => {
         return {
           id: permission.id,
