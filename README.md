@@ -22,6 +22,9 @@ This project is a **Node.js** application that manages **users**, **roles**, and
   - Middleware-based role and permission checking to restrict access to routes.
   - Protected routes that only authenticated users or users with specific roles can access.
 
+- **Rate Limiting**:
+  - Implemented a rate-limiting middleware to restrict the number of requests per IP within a specified time window. This helps in mitigating abuse and ensures better control over API usage.
+
 ## Technologies Used
 
 - **Node.js**
@@ -31,6 +34,7 @@ This project is a **Node.js** application that manages **users**, **roles**, and
 - **JWT** - For token-based authentication.
 - **bcrypt.js** - For password hashing.
 - **dotenv** - For managing environment variables.
+- **express-rate-limit** - To implement rate limiting.
 
 ---
 
@@ -47,6 +51,7 @@ This project is a **Node.js** application that manages **users**, **roles**, and
 ├── middleware
 │   ├── authMiddleware.js     # Middleware for JWT-based authentication
 │   ├── permissionMiddleware.js # Middleware for role-permission validation
+│   ├── rateLimiter.js        # Middleware for rate limiting (using express-rate-limit)
 ├── models
 │   ├── user.js               # User model
 │   ├── role.js               # Role model
