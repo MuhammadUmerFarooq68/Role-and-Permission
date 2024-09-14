@@ -11,7 +11,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Apply the rate limiter globally
-app.use(limiter);
+// app.use(limiter);
 
 // Use body parser and JSON
 app.use(express.json()); 

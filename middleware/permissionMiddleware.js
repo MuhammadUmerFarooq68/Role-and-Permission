@@ -1,6 +1,6 @@
 // const { UserRole, RolePermission, Permission } = require('../models');
 const UserRole =  require ('../models/userRole')
-const Permission = require ('../models/Permission');
+const Permission = require ('../models/permission');
 const RolePermission = require ('../models/rolePermission');
 
 module.exports = permissionName => async (req, res, next) => {

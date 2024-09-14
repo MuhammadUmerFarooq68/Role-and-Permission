@@ -12,7 +12,7 @@ Permission.init({
   parentId: {
     type: DataTypes.INTEGER,
     references: {
-      model: 'Permissions', // refers to table name
+      model: 'Permissions',
       key: 'id',
     },
     allowNull: true,
